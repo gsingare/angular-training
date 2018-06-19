@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template : '<div> I ma app <rdtech-datagrid></rdtech-datagrid> <rdtech-datagrid></rdtech-datagrid> </div>'
+  template : '<div>  <pooja-Angular2></pooja-Angular2> <pooja-Angular2></pooja-Angular2> </div>'
 })
 
 export class AppComponent {
