@@ -1,14 +1,14 @@
 <div class="poojitha-datagrid">
     <h1>Datagrid Component</h1>
+
+    {{data | json}}
     <table>
-        <tr>
-            <th>Column1</th>
-            <th>Column2</th>
+        <tr >
+            <th *ngFor = "let column of table.columns">{{column.label}}</th>
+           
         </tr>
-        <tr *ngFor="let user of users">
-            <td>{{user.Column1}}</td>
-            <td>{{user.Column2}}</td>
-        </tr>
-        
+      <tr *ngFor="let row of table.data">
+          <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
+      </tr> 
     </table> 
 </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'pooja-Angular2',
@@ -6,12 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./datagrid.compnent.css']
 })
 export class dataGridComponent {
-  
-    public users = [
-        {Column1:"Pooja", Column2:"k"},
-        {Column1:"Data2", Column2:"Data3" } 
-    ];
+ 
+    @Input() table;
+   
 
 }
 
- 
+  
