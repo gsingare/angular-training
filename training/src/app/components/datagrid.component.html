@@ -1,16 +1,14 @@
-<div class="rd-datagrid">
-
-    <h1>DataGrid Component</h1>
-
+<div class="poojitha-datagrid">
+    <h1>Datagrid Component</h1>
     <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th>Column1</th>
+            <th>Column2</th>
         </tr>
-        <tr>
-            <td>Govardhan</td>
-            <td>Singareddy</td>
+        <tr *ngFor="let user of users">
+            <td>{{user.Column1}}</td>
+            <td>{{user.Column2}}</td>
         </tr>
+        
     </table>
-
 </div>

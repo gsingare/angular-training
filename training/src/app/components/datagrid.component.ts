@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'rdtech-datagrid',
+  selector: 'pooja-Angular2',
   templateUrl: "./datagrid.component.html",
-  styleUrls: ["./datagrid.compnent.css"]
+  styleUrls: ['./datagrid.component.css']
 })
+export class dataGridComponent {
+  
+    public users = [
+        {Column1:"Pooja", Column2:"k"},
+        {Column1:"Data2", Column2:"Data3" }
+    ];
 
-export class DatagridComponent implements OnInit {
-
-  public ngOnInit() {
-    console.log(" iam inside the datagrid");
-
-  }
 }
+
+ 
