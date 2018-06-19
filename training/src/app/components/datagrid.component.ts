@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'mohan-datagrid',
@@ -8,14 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class DatagridComponent implements OnInit {
 
-public users = [
-  {FirstName : "Mohan",LastName : "P"},
-  {FirstName : "Govardhan",LastName : "S"},
-  {FirstName : "Mohan",LastName : "P"},
-  {FirstName : "Govardhan",LastName : "S"},
-  {FirstName : "Mohan",LastName : "P"},
-  {FirstName : "Govardhan",LastName : "S"}
-];
+@Input() public table; 
 
   public ngOnInit() {
     console.log("iam inside the datagrid");

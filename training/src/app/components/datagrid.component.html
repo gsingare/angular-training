@@ -4,12 +4,10 @@
 
     <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th *ngFor="let column of table.columns">{{column.label}}</th>
         </tr>
-        <tr *ngFor="let user of users">
-            <td>{{user.FirstName}}</td>
-            <td>{{user.LastName}}</td>
+        <tr *ngFor="let row of table.data">
+            <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
         </tr>
     </table>
 
