@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'datagrid',
@@ -6,12 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ["./datagrid.compnent.css"]
 })
 
-export class DatagridComponent implements OnInit {
-  public data =[{Name:"Jyothsna",Id:"1"},
-  {Name:"jyo",Id:"2"}];
-
-  public ngOnInit() {
-    console.log(" datagrid");
-
-  }
+export class DatagridComponent  {
+  
+  @Input() table;
+  
 }
