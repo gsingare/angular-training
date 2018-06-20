@@ -1,15 +1,14 @@
 <div class="rd-datagrid">
 
     <h1>DataGrid Component</h1>
+    {{data | json}}
 
     <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-        </tr>
-        <tr>
-            <td>Govardhan</td>
-            <td>Singareddy</td>
+            <th *ngFor = "let column of table.columns">{{column.label}}</th>
+       </tr>
+        <tr *ngFor= "let row of table.data">
+            <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
         </tr>
     </table>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
   selector: 'rdtech-datagrid',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DatagridComponent implements OnInit {
+ @Input() public table;
 
   public ngOnInit() {
     console.log(" iam inside the datagrid");
