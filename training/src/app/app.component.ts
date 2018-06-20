@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,31 +10,16 @@ export class AppComponent {
     columns : [
       {label : "First Name", key: "firstName"},
       {label : "Last Name", key: "lastName"},
-      {label : "Pet Name", key: "petName"},
-      {label : "Address", key: "address"},
+      {label : "ID", key: "id"},
       {}
     ],
     
     data : [    
-      {firstName: "Pooja", lastName: "k", petName: "poo",  property1: "view", property2: "delete"},
-      {firstName: "lakshmi", lastName: "poojitha", address:"NJ", delete: "true"},
-      {firstName: "Govardhan", lastName: "s",  view: "true"}
+      {firstName: "Pooja", lastName: "k", id: "100",view: "true", edit: "true", delete: "true" },
+      {firstName: "lakshmi", lastName: "poojitha", id:"110", view: "true", edit: "true", delete: "true"},
+      {firstName: "Govardhan", lastName: "s", id: "120",  view: "true", edit: "true", delete: "true"}
     ]
-  }
-  private companies = {
-    columns : [
-      {label : "Company name", key: "companyName"},
-      {label : "Address", key: "address"},
-      {label : "Zip Code", key: "zip"}
-        ],
-    
-    data : [    
-      {companyName: "RDtech", address: "nj"},
-      {companyName: "RDtech", address: "nj", zip: "08817"},
-      {companyName: "RDtech", address: "nj"}
-    ]
-  }
-  
-}
+  }  
+} 
 
 
