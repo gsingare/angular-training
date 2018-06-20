@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class DatagridComponent implements OnInit {
 
-@Input() public table; 
+@Input() public table;  
 
   public ngOnInit() {
     console.log("iam inside the datagrid");

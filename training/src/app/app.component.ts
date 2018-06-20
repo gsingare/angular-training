@@ -8,6 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   private users = {
+
+  buttons: [
+    {label: "Edit"},
+    {label: "Update"},
+    {label: "Save"},
+    {label: "Delete"}
+  ]
+  }
+
+  /**private users = {
     columns: [
       { label: "First Name", key: "firstName" },
       { label: "Last Name",  key: "lastName" },  
@@ -31,7 +41,7 @@ export class AppComponent {
       { companyName: "RD-TECH Systems INC 2", address: "Piscataway,NJ" },
       { companyName: "RD-TECH Systems INC 3", address: "Piscataway,NJ" }
     ]
-  }
+  }*/
    
 
 }
