@@ -8,7 +8,24 @@
            
         </tr>
       <tr *ngFor="let row of table.data">
-          <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
+          <td *ngFor="let column of table.columns">
+                {{row[column.key]}}</td>
+                
+               
+            <td >
+        <div >
+            <button *ngIf="row.property1 == 'view'">View</button> 
+            <button *ngIf="row.delete">Delete</button> 
+        </div>
+
+        
+                
+            
+              
+            </td>
+            
+            
+           
       </tr> 
     </table> 
 </div>

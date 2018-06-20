@@ -12,12 +12,13 @@ export class AppComponent {
       {label : "Last Name", key: "lastName"},
       {label : "Pet Name", key: "petName"},
       {label : "Address", key: "address"},
+      {}
     ],
     
     data : [    
-      {firstName: "Pooja", lastName: "k", petName: "poo"},
-      {firstName: "lakshmi", lastName: "poojitha", address:"NJ"},
-      {firstName: "Govardhan", lastName: "s"}
+      {firstName: "Pooja", lastName: "k", petName: "poo",  property1: "view", property2: "delete"},
+      {firstName: "lakshmi", lastName: "poojitha", address:"NJ", delete: "true"},
+      {firstName: "Govardhan", lastName: "s",  view: "true"}
     ]
   }
   private companies = {
