@@ -10,13 +10,14 @@ export class AppComponent {
   private users = {
     columns: [
       { label: "First Name", key: "firstName" },
-      { label: "Last Name",  key: "lastName" }, 
-      { label: "Address",    key: "address" }
+      { label: "Last Name",  key: "lastName" },  
+      { label: "Address",    key: "address" },
+      
     ],
     data: [
-      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison" },
-      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison" },
-      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison" }
+      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison", view: true, update: true, delete: true },
+      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison", delete: true, edit: true, share: true },
+      { firstName: "Mohan", lastName: "Ponnapati", address: "Edison",  firstname: "Mohan", lastname: "Ponnapati"}
     ]
   }
 

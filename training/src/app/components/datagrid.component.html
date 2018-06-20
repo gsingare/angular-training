@@ -8,6 +8,18 @@
         </tr>
         <tr *ngFor="let row of table.data">
             <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
+            <td >
+                <div>
+                    <button *ngIf="row.view">View</button>
+                    <button *ngIf="row.update">Update</button>
+                    <button *ngIf="row.edit">Edit</button>
+                    <button *ngIf="row.delete">delete</button>
+                    <button *ngIf="row.share">share</button>
+                    <button *ngIf="row.firstname == 'Mohan' && row.lastname == 'Ponnapati'">My Name</button>
+                    
+                </div>
+                
+            </td>
         </tr>
     </table>
 

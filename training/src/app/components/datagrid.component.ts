@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'mohan-datagrid',
   templateUrl: "./datagrid.component.html",
-  styleUrls: ["./datagrid.compnent.css"]
+  styleUrls: ["./datagrid.compnent.scss"]
 })
 
 export class DatagridComponent implements OnInit {
