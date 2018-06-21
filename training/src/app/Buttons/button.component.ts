@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Input } from '@angular/core';
 
 @Component({
   selector: 'Buttons',
@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 
 export class buttonComponent  {
- /* @Input() public table;*/
+  @Input() public table;
   
 }
