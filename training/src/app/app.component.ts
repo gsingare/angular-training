@@ -10,11 +10,12 @@ export class AppComponent {
     columns: [
       {label:"Name",key:"name"},
       {label:"Id",key:"id"},
-      {label:"Dep",key:"dep"}
+      {label:"Dep",key:"dep"},
+      {label:"",key:"true"}
     ],
     data: [
-      {name:"Jyothsna",id:"4",dep:"it"},
-      {name:"Jyo",id:"6",dep:"it"}
+      {name:"Jyothsna",id:"4",dep:"it",view:true},
+      {name:"Jyo",id:"6",dep:"it",view:true}
   ]
  }
  private companies= { 
@@ -23,7 +24,6 @@ export class AppComponent {
     {label:"Id",key:"id"},
     {label:"Dep",key:"dep"}
   ],
-
   data: [
     {CompanyName:"infotech", id:"4", dep:"it"},
     {CompanyName:"soft",id:"6",dep:"it"}
