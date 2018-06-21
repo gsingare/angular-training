@@ -1,20 +1,5 @@
-<div class="tech-button">
+<div class="Buttons">
 
-    <h1>DataGrid Component</h1>
-   <!--     
-    {{data |json}} -->
-    <table>
-        <tr>
-            <th *ngFor = "let column of table.columns">{{column.label}}</th>   
-        </tr>
-        <tr *ngFor = "let row  of table.data">
-            <td *ngFor = "let column of table.columns">
-            {{row[column.key]}}
-            </td>
-            <td *ngIf="row.view">click</td>
-            <button *ngIf="row.view" && "row.view">click</button>
-            <button *ngIf="row.view"||"row.view" >submit</button>
-        </td>
-        </tr>    
-    </table>
-</div>
+    <button *ngFor="let row of table.button">{{row.label}}</button>
+    
+    </div>
