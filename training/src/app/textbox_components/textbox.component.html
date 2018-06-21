@@ -3,7 +3,8 @@
         <h1>Simple TextBox Component</h1>
         <div>
         First name:
-        <input type="text" name="firstname" value="Please Enter your First Name" size="40">
+        <input type="text" name="firstname" value="{{firstname}}" size="40" (input)="onTextChange($event)">
+        <label>{{errorMessage}}</label>
   <br>
         Last name:
   <input type="text" name="lastname" value="Please Enter your Last Name" size="40">
