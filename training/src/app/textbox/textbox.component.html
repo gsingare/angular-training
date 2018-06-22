@@ -1,12 +1,17 @@
+
 <div class="poojitha">
         <h1> Simple Textbox</h1>
-        Enter First Name: <input name = "firstname" type = "text">
 
-        Enter Last Name: <input name = "lastname"  type = "text">
-       
+     <div class="custom">
+        Enter Value: <input name = "value" type="text" (change)="onTextChange($event)"  (keyup)="onTextChange($event)"value="{{textValue}}">
+        <label>{{errorMessage}}</label>
+        <br>
+    </div>
+
         <br>
         <br>
                
-   
-</div>
     
+</div>
+
+

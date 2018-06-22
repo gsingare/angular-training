@@ -7,6 +7,18 @@ import { Component, Input } from '@angular/core';
 
 export class AppComponent {
   private users = {
+  buttons: [
+    {label: "Reset"},
+    {label: "Submit"}
+    
+  ]
+}
+  }
+
+
+
+ /* 
+  private users = {
     columns : [
       {label : "First Name", key: "firstName"},
       {label : "Last Name", key: "lastName"},
@@ -19,7 +31,10 @@ export class AppComponent {
       {firstName: "lakshmi", lastName: "poojitha", id:"110", view: "true", edit: "true", delete: "true"},
       {firstName: "Govardhan", lastName: "s", id: "120",  view: "true", edit: "true", delete: "true"}
     ]
-  }  
-} 
+  }
+  
+  */
+ 
+
 
 
