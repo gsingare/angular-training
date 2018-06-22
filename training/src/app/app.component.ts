@@ -6,8 +6,18 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  /**private users = {
 
-  private users = {
+    labels: [
+      {label: "First name:"},
+      {label: "Last name:"},
+      {label: "Phone Number:"},
+      {label: "Address:"},
+      {label: "E-mail:"}
+    ],
+  }*/
+
+  /**private users = {
 
   buttons: [
     {label: "Edit"},
@@ -15,7 +25,7 @@ export class AppComponent {
     {label: "Save"},
     {label: "Delete"}
   ]
-  }
+  }*/
 
   /**private users = {
     columns: [

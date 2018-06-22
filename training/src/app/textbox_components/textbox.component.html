@@ -1,7 +1,17 @@
 <div class="mohan-textbox">
 
-        <h1>Simple TextBox Component</h1>
-        <div>
+            <h1>Simple TextBox Component</h1>
+
+            <label>{{errorMessage}}</label><br>
+
+            <div *ngFor="let column of users.labels">{{column.label}}
+      <input type="string" value="Please type here" size="40" (input)="onTextChange($event)">
+            </div>
+      
+      
+</div>
+          
+ <!--   <div>
         First name:
         <input type="text" name="firstname" value="{{firstname}}" size="40" (input)="onTextChange($event)">
         <label>{{errorMessage}}</label>
@@ -18,5 +28,5 @@
         E-mail:
   <input type="E-mail" name="E-mail" value="Please Enter your E-mail ID" size="25">
   <br><br>
-  </div>
-  </div>
+  </div>-->
+  

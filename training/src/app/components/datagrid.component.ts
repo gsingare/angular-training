@@ -11,7 +11,7 @@ export class DatagridComponent implements OnInit {
 @Input() public table;  
 
   public ngOnInit() {
-    console.log("iam inside the datagrid");
+    console.log("iam inside the datagrid"); 
 
   }
 }
