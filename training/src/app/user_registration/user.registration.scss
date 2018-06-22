@@ -1,0 +1,48 @@
+.user-registration{
+    margin-top: 150px;
+    background:lightblue;
+    padding:center;
+    text-align: center;
+    font-family: Georgia;
+
+    
+
+
+    .first{
+        text-align: center;
+        position: relative;
+        .firstnameerror{
+           
+         color: red;
+        }
+    }
+
+    .last{
+        text-align: center;
+        .lastnameerror{
+            color: red;
+        }
+    }
+
+    .email{
+        text-align: center;
+        .emailerror{
+            color: red;
+        }
+    }
+
+    .pw{
+        text-align: center; 
+        .pwerror{
+            color:red;
+        }
+    }
+    .button{
+        text-align: center;
+        color: green;
+    }
+}
+
+h1{
+    background-color: lightseagreen;
+}
