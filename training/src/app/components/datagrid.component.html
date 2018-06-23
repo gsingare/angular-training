@@ -2,15 +2,13 @@
 
     <h1>DataGrid Component</h1>
 
-    <table>
+    {{data | json}}
+   <table>
         <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
+            <th *ngFor= "let column of table.columns">{{column.label}}</th>
         </tr>
-        <tr>
-            <td>divya</td>
-            <td>pal</td>
+        <tr *ngFor= "let row of table.data">
+            <td *ngFor= "let column of table.columns">{{row[column.key]}}</td>
         </tr>
     </table>
-
 </div>

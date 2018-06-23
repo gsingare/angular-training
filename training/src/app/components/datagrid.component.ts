@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'rdtech-datagrid',
+  selector: 'divya-datagrid',
   templateUrl: "./datagrid.component.html",
   styleUrls: ["./datagrid.compnent.css"]
 })
 
-export class DatagridComponent implements OnInit {
+export class DatagridComponent  {
 
-  public ngOnInit() {
-    console.log(" iam inside the datagrid");
+@Input() table;  
 
-  }
+
 }

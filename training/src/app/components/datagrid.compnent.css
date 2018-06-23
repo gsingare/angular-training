@@ -1,7 +1,7 @@
 .rd-datagrid table{
-    background: yellow;
+    background:rgb(0, 255, 13);
 }
 
 .rd-datagrid th{
-    background: green;
+    background: rgb(26, 74, 145);
 }
