@@ -3,11 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {DatagridComponent} from './components/datagrid.component';
+import {TextBoxComponent} from './components/textbox/textbox.component';
+import {UserRegistrationComponent} from './userRegistration/userRegistration';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatagridComponent
+    DatagridComponent,
+    TextBoxComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule

@@ -14,12 +14,13 @@ export class AppComponent {
       {label : "Last Name",key : "lastName"},
       {label : "Address", key: "address"},
       {label : "Phnno",key :"phnno"}
+      
     ],
     data :
 [
-  {firstName : "Ravali", lastName : "s", address : "hyd"},
-  {firstName : "Arun", lastName : "s"},
-  {firstName : "Swetha", lastName : "s", phnno : "9676165336"}
+  {firstName : "Ravali", lastName : "s", address : "hyd", view :true,delete:true ,update:true },
+  {firstName : "Arun", lastName : "s",update:true},
+  {firstName : "Swetha", lastName : "s", phnno : "9676165336",view : true,delete:true}
 
 ] }
 private carmodels = {

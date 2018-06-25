@@ -1,0 +1,5 @@
+<div style="margin-left: 200px ; margin-top :200px ;">
+        <label>{{errorMessage}}</label>
+        <div *ngFor="let column of users.labels">{{column.label}}
+                <input type='text'(change)='onTextChange($event)' value='{{textValue}}'>
+</div>

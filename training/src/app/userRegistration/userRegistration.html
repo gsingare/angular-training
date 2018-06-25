@@ -1,0 +1,23 @@
+<div class="user-registration">
+    <h1>Welcome to UMD Class Registration</h1>
+    <div class="field">
+        <label>Name:</label>
+        <input type="text"[value]="userDetails.Name" (input)="userDetails.Name = $event.target.value">
+        <label class="Nameerror">{{userDetails.Nameerror}}</label>
+    </div>
+    <div class="field">
+        <label>Email: </label>
+        <input type="text" [value]="userDetails.Email"(input)="userDetails.Email = $event.target.value">
+        <label class="Emailerror">{{userDetails.Emailerror}}</label>
+    </div>
+    <div class= "field">
+        <label>Password:</label>
+        <input type="password"[value]="userDetails.Password"(input)="userDetails.Password = $event.target.value">
+        <label class="Passworderror">{{userDetails.Passworderror}}</label>
+    </div>
+    <div>
+        <button (click)="login()">Login</button> 
+    </div>
+
+</div>
+    

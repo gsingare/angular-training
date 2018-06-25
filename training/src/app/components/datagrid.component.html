@@ -1,7 +1,6 @@
-<div class="rd-datagrid">
+<div class="ravali-datagrid">
 
     <h1>DataGrid Component</h1>
-    {{data | json}}
 
     <table>
         <tr>
@@ -9,6 +8,17 @@
        </tr>
         <tr *ngFor= "let row of table.data">
             <td *ngFor="let column of table.columns">{{row[column.key]}}</td>
+        <td>
+            <div>
+                    <button *ngIf="row.delete">Delete</button>
+                    <button *ngIf="row.view">View</button>
+                    <button *ngIf="row.update">Update</button>
+                    
+            
+            </div>
+            
+            </td>
+            
         </tr>
     </table>
 

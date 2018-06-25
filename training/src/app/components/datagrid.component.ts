@@ -1,9 +1,9 @@
 import { Component, OnInit ,Input} from '@angular/core';
 
 @Component({
-  selector: 'rdtech-datagrid',
+  selector: 'ravali-datagrid',
   templateUrl: "./datagrid.component.html",
-  styleUrls: ["./datagrid.compnent.css"]
+  styleUrls: ["./datagrid.component.scss"]
 })
 
 export class DatagridComponent implements OnInit {
