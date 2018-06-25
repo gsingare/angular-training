@@ -1,0 +1,34 @@
+.Email{
+    position:random($limit: 1);
+    margin: 30px;
+    text-align: center;
+    .error{
+    position:round($number: 0);
+     left: 10px;
+     top:50px;
+     color:blue($color: #000000);
+    }
+
+}
+.password{
+    text-align: center;
+    position: relative;
+    margin-right: 12px;
+    
+    .error{
+        
+    position: absolute;
+     left: 20px;
+     top: 50px;
+     color:orange;
+    }
+    
+}
+.button{
+    text-align: center;
+}
+
+h1{
+text-align: center;
+color:mediumvioletred;
+}

@@ -6,12 +6,15 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  private users = {
-    buttons: [
+  private userDetails = {
+  button: {label: "Submit"}
+  }
+  
+    /*buttons: [
       {label:"submit"},
       {label:"click"},
     ]
-  }
+  }*/
 /*
     data: [
       {name:"Jyothsna",id:"4",dep:"it",view:true},

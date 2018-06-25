@@ -1,0 +1,18 @@
+<div class="Registration">
+        <h1>Registration Page</h1>
+        <div class="field">
+        <label>Email:</label> 
+        <input type = "text"[value]="userDetails.Email" (input)="userDetails.Email=$event.target.value"><br><br>
+        <label class="error-message">{{userDetails.Emailerror}}</label>
+        </div>
+        <div class="field">
+        <label>Password:</label> 
+        <input type="Password"[value]="userDetails.Email" (input)="userDetails.Email=$event.target.value"><br><br>
+        <label class="error-message">{{userDetails.Passworderror}}</label>
+        </div>
+        <div> 
+          <button(click)="login()">login</button>
+      </div>
+       
+</div>
+    
