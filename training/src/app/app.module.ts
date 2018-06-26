@@ -7,6 +7,11 @@ import {buttonComponent} from './button_components/button.component';
 import {textboxComponent} from './textbox_components/textbox.component';
 import {userRegistration} from './user_registration/user.registration';
 
+import {HttpModule} from '@angular/http';
+import { RemoteService } from './service/remote.service';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +21,12 @@ import {userRegistration} from './user_registration/user.registration';
     userRegistration,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [
+    RemoteService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
