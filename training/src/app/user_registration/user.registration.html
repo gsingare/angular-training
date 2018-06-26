@@ -18,18 +18,24 @@
 
         <div class="email">
         <label>E-mail:</label>
-        <input type="text" [value]="userdetails.email" (input)="userdetails.email = $event.target.value">
+        <input type="text" [value]="userdetails.email" (change)="validateEmail($event)">
         <label class="emailerror">{{userdetails.emailerror}}</label>
     </div>
     <br>
         <div class="pw">
         <label>New password:</label>
-        <input type ="password" [value]="userdetails.password" (input)="userdetails.password = $event.target.value">
+        <input type ="password" [value]="userdetails.password" (change)="validatePassword($event)">
         <label class="pwerror">{{userdetails.passworderror}}</label>
         </div>
         <br>
         <div>
-            <button  class="button" (click)="login()">Login</button>
+            <div *ngIf="userdetails.disableLogin">
+                    <button  disabled (click)="login()" >Login</button>
+            </div>
+            <div *ngIf="!userdetails.disableLogin">
+                    <button  enabled class="button" (click)="login()">Login</button>
+            </div>
+            
         </div>
 
         <br>
