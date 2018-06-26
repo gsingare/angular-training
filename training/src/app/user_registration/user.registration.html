@@ -1,0 +1,36 @@
+<div class="user-registration">
+    <h1>Events in Los Angeles</h1>
+        <h2>Sign Up Page</h2>
+
+        <div class="first">
+                <label>First Name:</label>
+                <input type="text" [value]="userdetails.firstname" (input)="userdetails.firstname = $event.target.value">
+                <label class="firstnameerror">{{userdetails.firstnameerror}}</label>
+            </div><br>
+        <div class="last">
+                <label>Last Name:</label>
+                <input type="text" [value]="userdetails.lastname" (input)="userdetails.lastname = $event.target.value">
+                <label class="lastnameerror">{{userdetails.lastnameerror}}</label>
+                </div><br>
+
+
+
+
+        <div class="email">
+        <label>E-mail:</label>
+        <input type="text" [value]="userdetails.email" (input)="userdetails.email = $event.target.value">
+        <label class="emailerror">{{userdetails.emailerror}}</label>
+    </div>
+    <br>
+        <div class="pw">
+        <label>New password:</label>
+        <input type ="password" [value]="userdetails.password" (input)="userdetails.password = $event.target.value">
+        <label class="pwerror">{{userdetails.passworderror}}</label>
+        </div>
+        <br>
+        <div>
+            <button  class="button" (click)="login()">Login</button>
+        </div>
+
+        <br>
+</div>
