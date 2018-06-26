@@ -14,7 +14,10 @@
    
     <div class="username">
         <label>UserName: </label>
-        <input type="text" [value]='userDetails.username' (input)="userDetails.username = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)">
+        
+       
+        <input type="text" [value]='userDetails.username' (input)="userDetails.username = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)"> 
+       
         <label class="unerror">{{userDetails.usernameError}}</label>
     </div>
     
@@ -23,13 +26,16 @@
     <div class="email">
         
         <label>Email: </label>
-        <input type="text" [value]='userDetails.email' (input)="userDetails.email = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)" >
+        <input type="text" [value]='userDetails.email' (change)="validateEmail($event)" >
+        <!--<input type="text" [value]='userDetails.email' (input)="userDetails.email = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)" > -->
         <label class='emailerror'>{{userDetails.emailError}}</label>
     </div>
 
     <div class="password">
         <label>Password: </label>
-     <input type="password" [value]='userDetails.password' (input)="userDetails.password = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)">
+
+        <input type="text" [value]='userDetails.password' (change)="validatePassword($event)" >
+   <!--  <input type="password" [value]='userDetails.password' (input)="userDetails.password = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)"> -->
         <label class='pwerror'>{{userDetails.passwordError}}</label>
     
     </div>
@@ -42,7 +48,14 @@
 
     
     <div class="button">
-        <button (click)="login()">Register</button>
+        <div *ngIf="userDetails.disableLogin">
+                <button (click)="login()" disabled>Register</button>
+        </div>
+
+        <div *ngIf="!userDetails.disableLogin">
+                <button (click)="login()">Register</button>
+        </div>
+  
     </div>
 
     <br>

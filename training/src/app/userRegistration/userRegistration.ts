@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import { NullAstVisitor } from '@angular/compiler';
 
 @Component({
   selector: 'user-registration',
@@ -9,8 +10,51 @@ import { Component} from '@angular/core';
 
 export class UserRegistrationComponent {  
 
-    public userDetails={email: '', password: '', username: '', number:'', emailError: '', passwordError: '', usernameError: '', numberError: '' };
+    public userDetails={email: '', password: '', username: '', number:'', emailError: null, passwordError: null, usernameError: '', numberError: '', disableLogin: true };
  
+    public validateEmail(event){
+        console.log('validating the email');
+        this.userDetails.email = event.target.value;
+
+        if(this.userDetails.email.length==0){
+            console.log('email is empty');
+            this.userDetails.emailError = 'Email cannot be empty ';
+        }else{
+           this.userDetails.emailError = null;
+        }
+       
+        if(this.userDetails.emailError.length==null && this.userDetails.passwordError.length==null){
+            this.userDetails.disableLogin = false;
+        }
+    }
+
+    
+
+    public validatePassword(event){
+        console.log('Validating the password');
+        this.userDetails.password = event.target.value;
+
+        if(this.userDetails.password.length==0){
+            console.log('password is empty');
+            this.userDetails.passwordError = 'Password cannot be empty ';
+        }else if(this.userDetails.password.length<5){
+            this.userDetails.passwordError = 'Minimum 6 characters required';
+        }else if(this.userDetails.password.length>15){
+           this.userDetails.passwordError = 'Maximum character count is 15';
+        }else{
+           this.userDetails.passwordError = null;
+        }
+
+        if(this.userDetails.emailError==null && this.userDetails.passwordError==null){
+            this.userDetails.disableLogin = false;
+        }
+    }
+
+
+
+
+
+
     public login(){
          console.log('Inside the login');
          console.log('user details: '+ JSON.stringify(this.userDetails));
@@ -22,12 +66,15 @@ export class UserRegistrationComponent {
         }else if(this.userDetails.username.length<4){
            this.userDetails.usernameError = 'Minimum 5 characters required';
         }
-         if(this.userDetails.email.length==0){
+        
+        /*
+        if(this.userDetails.email.length==0){
              console.log('email is empty');
              this.userDetails.emailError = 'Email cannot be empty ';
          }else{
             this.userDetails.emailError = null;
          }
+         
 
          if(this.userDetails.password.length==0){
              console.log('password is empty');
@@ -39,6 +86,8 @@ export class UserRegistrationComponent {
          }else{
             this.userDetails.passwordError = null;
          }
+
+         */
 
          if(this.userDetails.number.length==0){
             console.log('Number cannot be empty');
