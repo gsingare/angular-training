@@ -1,6 +1,10 @@
 import { Component} from '@angular/core';
 import { NullAstVisitor } from '@angular/compiler';
 
+import {RemoteService} from '../service/remote.service'; 
+
+
+
 @Component({
   selector: 'user-registration',
   templateUrl: "./userRegistration.html",
@@ -9,6 +13,8 @@ import { NullAstVisitor } from '@angular/compiler';
 
 
 export class UserRegistrationComponent {  
+
+    constructor(private remoteService: RemoteService){ }
 
     public userDetails={email: '', password: '', username: '', number:'', emailError: null, passwordError: null, usernameError: '', numberError: '', disableLogin: true };
  
@@ -58,6 +64,10 @@ export class UserRegistrationComponent {
     public login(){
          console.log('Inside the login');
          console.log('user details: '+ JSON.stringify(this.userDetails));
+
+         let data = '';
+
+         this.remoteService.getResponse('/assets/userdetails.json', {}).subscribe((data) => data = data);
 
         
          if(this.userDetails.username.length==0){
