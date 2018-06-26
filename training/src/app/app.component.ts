@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   private userDetails = {
-  button: {label: "Submit"}
+  button: {label: "login"}
   }
   
     /*buttons: [

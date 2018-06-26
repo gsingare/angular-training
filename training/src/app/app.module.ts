@@ -12,7 +12,6 @@ import {RegistrationComponent} from  './Registrationpage/Registration.component'
     DatagridComponent,
     TextboxComponent,
     buttonComponent,
-   
     RegistrationComponent,
   ],
   imports: [

@@ -9,32 +9,27 @@ import { log } from 'util';
 
 export class RegistrationComponent  {
   
- public userDetails= {Email:'',password:'',Emailerror:'',passworderror:''};
+ public userDetails= {Email:'', Password:'',Emailerror:'',Passworderror:''};
 
  public login() {
    console.log('User Details:'+JSON.stringify(this.userDetails));
   
    if(this.userDetails.Email.length == 0){
      console.log('Mandatory Field');
-    }
-   else{
-     this.userDetails.Emailerror = null;
+     this.userDetails.Emailerror = 'Email is Empty';
   }
-
-  if(this.userDetails.password.length == 0){
-    console.log('Mandatory Field');
-    
-    this.userDetails.passworderror = null;
- }
- if(this.userDetails.password.length==0){
+ if(this.userDetails.Password.length==0){
   console.log('password is empty');
-  this.userDetails.passworderror = 'Password cannot be empty ';
-}else if(this.userDetails.password.length<10){
-  this.userDetails.passworderror = 'Minimum 5 characters required';
-}else if(this.userDetails.password.length>20){
- this.userDetails.passworderror = 'Maximum character count is 20';
-}else{
- this.userDetails.passworderror = null;
+  this.userDetails.Passworderror = 'Password is  empty ';
+}
+if(this.userDetails.Password.length<10){
+  this.userDetails.Passworderror = 'Minimum 5 characters required';
+}
+else if(this.userDetails.Password.length>20){
+ this.userDetails.Passworderror = 'Maximum character count is 20';
+}
+else{
+ this.userDetails.Passworderror = null;
 }
 }
 }
