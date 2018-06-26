@@ -34,7 +34,7 @@
     <div class="password">
         <label>Password: </label>
 
-        <input type="text" [value]='userDetails.password' (change)="validatePassword($event)" >
+        <input type="password" [value]='userDetails.password' (change)="validatePassword($event)" >
    <!--  <input type="password" [value]='userDetails.password' (input)="userDetails.password = $event.target.value" (change)="onTextChange($event)"(keyup)="onTextChange($event)"> -->
         <label class='pwerror'>{{userDetails.passwordError}}</label>
     
