@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RemoteService} from '../service/remote.service';
 
 @Component({
   selector: 'user-registration',
@@ -7,6 +8,9 @@ import { Component } from '@angular/core';
 })
 
 export class userRegistration {
+
+constructor(private remoteservice: RemoteService) {}
+
   public userdetails = {firstname: "", lastname: "", email :"", password:"", 
   firstnameerror:"", lastnameerror:"", emailerror:null, passworderror:null, disableLogin: true};
 
@@ -61,6 +65,9 @@ export class userRegistration {
      if(this.userdetails.lastnameerror == null){
       this.userdetails.disableLogin = false;
     }
+
+    let data = '';
+    this.remoteservice.getResponse('/assets/userdetails.json',{}).subscribe((data) => data = data);
 
     
   }
