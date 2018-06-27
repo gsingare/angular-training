@@ -1,7 +1,19 @@
+<div *ngIf="_userDetails !=null">
+    Login Successful
 
 
-<div class="user">
+<label>{{_userDetails.firstname}}</label></div>
+
+<div class="user" *ngIf="_userDetails ==null">
     <h1>Welcome</h1>
+<!--
+    <div *ngIf="_userDetails">
+        Login Successful
+    </div>
+
+    <label>{{_userDetails.firstname}}</label>
+
+   -->
 
     
     <div class="logo">

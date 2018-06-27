@@ -14,10 +14,11 @@ import {RemoteService} from '../service/remote.service';
 
 export class UserRegistrationComponent {  
 
+    
     constructor(private remoteService: RemoteService){ }
 
     public userDetails={email: '', password: '', username: '', number:'', emailError: null, passwordError: null, usernameError: '', numberError: '', disableLogin: true };
- 
+    public _userDetails;
     public validateEmail(event){
         console.log('validating the email');
         this.userDetails.email = event.target.value;
@@ -67,7 +68,7 @@ export class UserRegistrationComponent {
 
          let data = '';
 
-         this.remoteService.getResponse('/assets/userdetails.json', {}).subscribe((data) => data = data);
+         this.remoteService.getResponse('/assets/userdetails.json', {}).subscribe((data) => this._userDetails = data);
 
         
          if(this.userDetails.username.length==0){
