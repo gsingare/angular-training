@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { log } from 'util';
 
+import {RemoteService} from '../service/remote.service'
+
 @Component({
   selector: 'Registration',
   templateUrl: "./Registration.component.html",
@@ -8,28 +10,42 @@ import { log } from 'util';
 })
 
 export class RegistrationComponent  {
-  
- public userDetails= {Email:'', Password:'',Emailerror:'',Passworderror:''};
 
- public login() {
-   console.log('User Details:'+JSON.stringify(this.userDetails));
-  
-   if(this.userDetails.Email.length == 0){
-     console.log('Mandatory Field');
-     this.userDetails.Emailerror = 'Email is Empty';
+  constructor(private remoteService: RemoteService){ }
+
+ public userDetails= {Email:'', Password:'',Emailerror:null,Passworderror:null, disableLogin: true };
+
+ public validateEmail(event){
+   this.userDetails.Email = event.target.value;
+
+   if(this.userDetails.Email.length == 0)
+  {
+    this.userDetails.Emailerror = 'Email is Empty';
   }
- if(this.userDetails.Password.length==0){
-  console.log('password is empty');
-  this.userDetails.Passworderror = 'Password is  empty ';
-}
-if(this.userDetails.Password.length<10){
-  this.userDetails.Passworderror = 'Minimum 5 characters required';
-}
-else if(this.userDetails.Password.length>20){
- this.userDetails.Passworderror = 'Maximum character count is 20';
-}
-else{
- this.userDetails.Passworderror = null;
-}
+ else{ 
+   this.userDetails.Emailerror=null;
+     }
+     if(this.userDetails.Emailerror==null && this.userDetails.Passworderror==null){
+       this.userDetails.disableLogin=false;
+     }
+ }
+ public validatePassword(event){
+  this.userDetails.Password = event.target.value;
+  if(this.userDetails.Password.length == 0){
+    this.userDetails.Passworderror = 'Password is  empty ';
+  }
+  else{
+   this.userDetails.Passworderror=null;
+  }
+  if(this.userDetails.Emailerror==null && this.userDetails.Passworderror==null){
+    this.userDetails.disableLogin=false;
+  }
+ }
+ public login() {
+   console.log('user Details:'+JSON.stringify(this.userDetails));
+
+   let data='';
+
+   this.remoteService.getResponse('/assets/userdetails.json', {}).subscribe((data) => data = data);
 }
 }

@@ -1,21 +1,24 @@
 <div class="Registration">
         <h1>Registration Page</h1>
         <div class="img">
-        <img src="https://s2982.pcdn.co/wp-content/uploads/2018/02/winnie-the-pooh-quote-on-life.jpg"width="250px"> 
+        <img src="https://s2982.pcdn.co/wp-content/uploads/2018/02/winnie-the-pooh-quote-on-life.jpg" width="200px"> 
         </div>
         <div class="Email">
                <label>Email:</label> 
-               <input type = "text" [value]="userDetails.Email" (input)="userDetails.Email=$event.target.value"><br><br>
+               <input type = "text" [value]="userDetails.Email" (keyup)="validateEmail($event)"><br>
                <label class="error-message">{{userDetails.Emailerror}}</label>
           </div>
         <div class="Password">
               <label>Password:</label> 
-              <input type="Password" [value]="userDetails.Password" (input)="userDetails.Password=$event.target.value"><br><br>
+              <input type="Password" [value]="userDetails.Password" (keyup)="validatePassword($event)"><br><br>
               <label class="error-message">{{userDetails.Passworderror}}</label>
         </div>
-       
-        <div class="button"> 
-             <button (click)= "login()" >Register</button>
+        <div class="button">
+        <div *ngIf="userDetails.disableLogin"> 
+             <button (click)= "login()" disabled>Register</button>
         </div>
-     
+        <div *ngIf="!userDetails.disableLogin"> 
+            <button (click)= "login()">Register</button>
+       </div>
+      </div>
   </div>
