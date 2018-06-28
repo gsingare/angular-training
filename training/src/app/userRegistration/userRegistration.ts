@@ -34,6 +34,6 @@ export class UserRegistrationComponent  {
         this.userDetails.Passworderror=""
        }else if(this.userDetails.Password.length > 16){
         this.userDetails.Passworderror=" requires 8-16 characters only"
-   
+       }
  }
 }
