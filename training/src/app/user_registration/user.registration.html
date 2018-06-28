@@ -1,7 +1,13 @@
-<div class="user-registration">
+<div *ngIf="_userDetails !=null">
+        Log in successfull
+        <label>{{_userDetails.Firstname}}</label>
+    </div>
+    
+  <div class="user-registration"  *ngIf="_userDetails ==null">
     <h1>Welcome to 2018 Sports Event</h1>
         <h2>Sign Up Page</h2>
-
+        
+<!--User Details : {{_userDetails | json}}-->
         <div class="first">
                 <label>First Name:</label>
                 <input type="text" [value]="userdetails.firstname" (input)="userdetails.firstname = $event.target.value">

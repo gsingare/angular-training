@@ -13,7 +13,7 @@ constructor(private remoteservice: RemoteService) {}
 
   public userdetails = {firstname: "", lastname: "", email :"", password:"", 
   firstnameerror:"", lastnameerror:"", emailerror:null, passworderror:null, disableLogin: true};
-
+public _userDetails;
   public validateEmail(event){
     console.log ("validating the email");
     this.userdetails.email = event.target.value;
@@ -67,7 +67,7 @@ constructor(private remoteservice: RemoteService) {}
     }
 
     let data = '';
-    this.remoteservice.getResponse('/assets/userdetails.json',{}).subscribe((data) => data = data);
+    this.remoteservice.getResponse('/assets/userdetails.json',{}).subscribe((data) => this._userDetails = data);
 
     
   }
