@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { RemoteService } from './service/remote.service';
+
+@Component({
+  selector: 'home-page',
+  templateUrl : "./home.component.html"
+})
+
+export class HomeComponent {
+
+  constructor(private remoteService: RemoteService){ }
+
+  public listUsers(){
+    console.log("list users");
+    this.remoteService.getRemoteResponse('assets/list-user.json');
+  }
+  public listCompanies(){
+    console.log("list companies");
+    this.remoteService.getRemoteResponse('assets/list-companies.json');
+  }
+}
