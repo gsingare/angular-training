@@ -12,7 +12,7 @@ export class HomeComponent {
 
   public listUsers(){
     console.log("list users");
-    this.remoteService.getRemoteResponse('assets/list-user.json');
+    this.remoteService.getRemoteResponse('assets/list-users.json');
   }
   public listCompanies(){
     console.log("list companies");
