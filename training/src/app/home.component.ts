@@ -18,4 +18,4 @@ export class HomeComponent {
     console.log("list companies");
     this.remoteService.getRemoteResponse('assets/list-companies.json');
   }
-}
+}  

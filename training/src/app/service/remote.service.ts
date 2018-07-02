@@ -21,20 +21,18 @@ export class RemoteService {
  public getRemoteResponse(url) {
 
     this.callRemote(url).then((response) => {
-
-        console.log('response after promise :' + JSON.stringify(response));
         this.routeService.setRouteData(response);
 
-        if(url == 'assets/list-user.json'){
+        if(url == 'assets/list-users.json'){
             this.router.navigate(['home/listUsers']);
-        }else if(url == 'assets/list-companies.json'){
-            this.router.navigate(['home/listCompanies']);
+            console.log('response after promise :' + JSON.stringify(response));
         }
-      
-        
-        /**this.router.navigate(['home/listUsers']);*/
+        else if(url == 'assets/list-companies.json'){
+            this.router.navigate(['home/listCompanies']);
+            console.log('response after promise :' + JSON.stringify(response));
+        }
     });
-    }
+    } 
 
 
 

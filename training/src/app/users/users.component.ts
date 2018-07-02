@@ -11,4 +11,4 @@ constructor(private routeService: RouteService){
 this.users = this.routeService.getRouteData();
 console.log("user list is" + JSON.stringify(this.users));
 }
-}
+} 
