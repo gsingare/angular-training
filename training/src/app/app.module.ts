@@ -1,14 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, PreloadAllModules} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import {dataGridComponent} from './components/datagrid.component';
 import {textboxComponent} from './textbox/textbox.component';
 import {buttonComponent} from './buttons/buttons.component';
 import {UserRegistrationComponent} from './userRegistration/userRegistration';
+import { HomeComponent } from './home.component';
+import { UsersComponent } from './users/users.component';
+import { CompanyComponent } from './company/company.component';
+
 
 import { HttpModule } from '@angular/http';
 import {RemoteService} from './service/remote.service';
+import {RouteService} from './service/route.service';
+
+import { ROUTES } from './app.route';
 
 @NgModule({
   declarations: [
@@ -16,15 +24,20 @@ import {RemoteService} from './service/remote.service';
     dataGridComponent,
     textboxComponent,
     buttonComponent,
-    UserRegistrationComponent
+    UserRegistrationComponent,
+    UsersComponent,
+    HomeComponent,
+    CompanyComponent
 
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules})
   ],
   providers: [
-    RemoteService
+    RemoteService,
+    RouteService
   ],
   bootstrap: [AppComponent]
 })

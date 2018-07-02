@@ -1,23 +1,29 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl : './app.component.html'
+  template : '<router-outlet></router-outlet>'
 })
 
-export class AppComponent {
-  private users = {
+export class AppComponent { }
+
+
+
+
+
+
+
+
+
+
+/*private users = {
   buttons: [
     {label: "Reset"},
     {label: "Submit"}
     
   ]
 }
-  }
-
-
-
- /* 
   private users = {
     columns : [
       {label : "First Name", key: "firstName"},
