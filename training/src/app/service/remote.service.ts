@@ -25,11 +25,23 @@ export class RemoteService {
 
         if(url == 'assets/list-users.json'){
             this.router.navigate(['home/listUsers']);
-            console.log('response after promise :' + JSON.stringify(response));
+            //console.log('response after promise :' + JSON.stringify(response));
         }
         else if(url == 'assets/list-companies.json'){
             this.router.navigate(['home/listCompanies']);
-            console.log('response after promise :' + JSON.stringify(response));
+           //console.log('response after promise :' + JSON.stringify(response));
+        }
+        else if(url == 'assets/info-Google.json'){
+            this.router.navigate(['home/infoGoogle']);
+            //console.log('response after promise :' + JSON.stringify(response));
+        }
+        else if(url == 'assets/info-Apple.json'){
+            this.router.navigate(['home/infoApple']);
+            //console.log('response after promise :' + JSON.stringify(response));
+        }
+        else if(url == 'assets/info-Microsoft.json'){
+            this.router.navigate(['home/infoMicrosoft']);
+            //console.log('response after promise :' + JSON.stringify(response));
         }
     });
     } 

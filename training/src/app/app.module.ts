@@ -9,6 +9,9 @@ import {userRegistration} from './user_registration/user.registration';
 import { usersComponent } from './users/users.component';
 import { HomeComponent } from './home.component';
 import { CompanyComponent } from './Company/company.component';
+import { googleComponent } from './google/info.google';
+import { appleComponent } from './apple/info.apple';
+import { microsoftComponent } from './microsoft/info.microsoft';
 
 
 import {HttpModule} from '@angular/http';
@@ -26,7 +29,10 @@ import { ROUTES } from './app.route';
     userRegistration,
     usersComponent,
     HomeComponent,
-    CompanyComponent
+    CompanyComponent,
+    googleComponent,
+    appleComponent,
+    microsoftComponent
   ],
   imports: [
     BrowserModule,

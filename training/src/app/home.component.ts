@@ -11,11 +11,11 @@ export class HomeComponent {
   constructor(private remoteService: RemoteService){ }
 
   public listUsers(){
-    console.log("list users");
+    //console.log("list users");
     this.remoteService.getRemoteResponse('assets/list-users.json');
   }
   public listCompanies(){
-    console.log("list companies");
+    //console.log("list companies");
     this.remoteService.getRemoteResponse('assets/list-companies.json');
   }
 }  

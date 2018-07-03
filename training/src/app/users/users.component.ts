@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { RouteService} from '../service/route.service';
 @Component({
-  selector: 'user-list',
-  template : '<div>i am in List Users {{users | json}}</div>'
+  //selector: 'user-list',
+  templateUrl : "./users.datagrid.html"
 })
 
 export class usersComponent {
     public users = {};
 constructor(private routeService: RouteService){
 this.users = this.routeService.getRouteData();
-console.log("user list is" + JSON.stringify(this.users));
+//console.log("user list is" + JSON.stringify(this.users));
 }
 } 
