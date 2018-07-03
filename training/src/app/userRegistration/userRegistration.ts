@@ -1,4 +1,5 @@
 import { Component} from '@angular/core';
+import {log} from "util";
 
 @Component({
   selector: 'user-registration',
@@ -35,5 +36,7 @@ export class UserRegistrationComponent  {
        }else if(this.userDetails.Password.length > 16){
         this.userDetails.Passworderror=" requires 8-16 characters only"
        }
+
  }
+ 
 }
