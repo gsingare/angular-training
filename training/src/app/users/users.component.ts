@@ -4,7 +4,7 @@ import { RouteService } from '../service/route.service';
 
 @Component({
     selector: 'user-list',
-    template:'<div>I am in list users {{users | json}}</div>'
+    templateUrl:"./users.component.html"
 
 })
 

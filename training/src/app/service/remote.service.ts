@@ -27,11 +27,21 @@ export class RemoteService {
         
         if(url == '/assets/list-users.json'){
             this.router.navigate(['home/listUsers']);
-        }else if(url == '/assets/list-companies.json'){
+        }
+        else if(url == '/assets/list-companies.json'){
             this.router.navigate(['home/listCompanies']);
         }
+        else if(url == 'assets/intel-info.json'){
+            console.log('response after promise :' + JSON.stringify(response));
+            this.router.navigate(['home/information']);
+        }else if(url == 'assets/amazon-info.json'){
+            console.log('response after promise :' + JSON.stringify(response));
+            this.router.navigate(['home/amazon']);
+        }else if(url == 'assets/gmail-info.json'){
+            console.log('response after promise :' + JSON.stringify(response));
+            this.router.navigate(['home/gmail']);
 
-        
+        }
        
     });
     }

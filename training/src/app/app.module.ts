@@ -10,6 +10,10 @@ import {UserRegistrationComponent} from './userRegistration/userRegistration';
 import { HomeComponent } from './home.component';
 import { UsersComponent } from './users/users.component';
 import { CompanyComponent } from './company/company.component';
+import { informationComponent } from './company-information/information.component';
+import { amazonComponent } from './amazon/amazon.component';
+import { gmailComponent } from './gmail/gmail.component';
+
 
 
 import { HttpModule } from '@angular/http';
@@ -27,7 +31,10 @@ import { ROUTES } from './app.route';
     UserRegistrationComponent,
     UsersComponent,
     HomeComponent,
-    CompanyComponent
+    CompanyComponent,
+    informationComponent,
+    amazonComponent,
+    gmailComponent
 
   ],
   imports: [
