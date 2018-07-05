@@ -12,6 +12,8 @@ import { CompanyComponent } from './Company/company.component';
 import { googleComponent } from './google/info.google';
 import { appleComponent } from './apple/info.apple';
 import { microsoftComponent } from './microsoft/info.microsoft';
+import { HighLighter } from './directives/highlighter.directive';
+
 
 
 import {HttpModule} from '@angular/http';
@@ -32,7 +34,8 @@ import { ROUTES } from './app.route';
     CompanyComponent,
     googleComponent,
     appleComponent,
-    microsoftComponent
+    microsoftComponent,
+    HighLighter
   ],
   imports: [
     BrowserModule,
